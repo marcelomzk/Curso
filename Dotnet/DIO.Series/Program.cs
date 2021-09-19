@@ -9,7 +9,7 @@ namespace DIO.Series
             //classe abstrata nao pode ser instanciada
             //EntidadeBase minhaClasse = new EntidadeBase();
 
-            Serie meuObjeto = new Serie();
+            //Serie meuObjeto = new Serie();
 
             Console.WriteLine("Hello World!");
         }
