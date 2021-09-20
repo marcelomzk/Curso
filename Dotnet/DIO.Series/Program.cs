@@ -11,7 +11,39 @@ namespace DIO.Series
 
             //Serie meuObjeto = new Serie();
 
-            Console.WriteLine("Hello World!");
+            string opcaoUsuario = ObterOpcaoUsuario();
+
+            while (opcaoUsuario.toUpper() != "X")
+            {
+                 switch (opcaoUsuario)
+                 {
+                     case "1":
+                        ListarSerie();
+                        break;
+                     case "2":
+                        InserirSerie();
+                        break;
+                     case "3":
+                        AtualizarSerie();
+                        break;
+                     case "4":
+                        ExcluirSerie();
+                     case "5":
+                        VisualizarSerie();
+                        break;
+                     case "C":
+                        Console.Clear();
+                        break;
+                     default:
+                        throw new ArgumentOutOfRangeException();
+                 }
+
+                 opcaoUsuario = ObterOpcaoUsuario();
+            }
+
+            Console.WriteLine("Obrigado por utilizar nossos sesrviços!");
+            Console.WriteLine();
+
         }
 
         private string ObterOpcaoUsuario()
@@ -29,7 +61,7 @@ namespace DIO.Series
 
             string opcaoUsuario = Console.ReadLine().toUpper();
             Console.WriteLine();
-            return opcaoUsuario;
+            return opcaoUsuario;    
         }
     }
 }
