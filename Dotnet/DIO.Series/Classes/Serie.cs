@@ -27,10 +27,11 @@ namespace DIO.Series
         {
             //Environment.NewLine https://docs.microsoft.com/en-us/dotnet/api/system.enviroment.newline?view=netcore-3.1
             string retorno = "";
-            retorno += "Genero: " + this.Genero + enviroment.NewLine;
-            retorno += "Titulo: " + this.Titulo + enviroment.NewLine;
-            retorno += "Descricao: " + this.Descricao + enviroment.NewLine;
-            retorno += "Ano de Início: " + this.Ano + enviroment.NewLine;
+            retorno += "Genero: " + this.Genero + Enviroment.NewLine;
+            retorno += "Titulo: " + this.Titulo + Enviroment.NewLine;
+            retorno += "Descricao: " + this.Descricao + Enviroment.NewLine;
+            retorno += "Ano de Início: " + this.Ano + Enviroment.NewLine;
+            retorno += "Excluido: " + this.Excluido
 
             return retorno;
             
