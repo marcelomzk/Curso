@@ -4,6 +4,7 @@ namespace DIO.Series
 {
     class Program
     {
+        static SerieRepositorio repositorio = new SerieRepositorio();
         static void Main(string[] args)
         {
             //classe abstrata nao pode ser instanciada
@@ -44,6 +45,23 @@ namespace DIO.Series
             Console.WriteLine("Obrigado por utilizar nossos sesrviços!");
             Console.WriteLine();
 
+        }
+
+        private static void ListarSerie()
+        {
+            Console.WriteLine("Listar séries");
+            var lista = repositorio.Lista();
+
+            if(lista.Count == 0)
+            {
+                Console.WriteLine("Nenhuma série cadastrada.");
+                return;
+            }
+
+            foreach (var serie in lista)
+            {
+                Console.WriteLine("#ID {0} - {1}", serie.retornaId(), serie.retornaTitulo());
+            }
         }
 
         private string ObterOpcaoUsuario()
