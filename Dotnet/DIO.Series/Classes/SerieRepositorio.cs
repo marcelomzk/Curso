@@ -15,12 +15,13 @@ namespace DIO.Series
         public void Exclui (int id)
         {
             //listaSerie.RemoveAt(id)
+            listaSerie[id].Excluir();
      
         }
 
-        public void Insere (Serie entidade)
+        public void Insere (Serie objeto)
         {
-            throw new NotImplementedException();
+            listaSerie.Add(objeto);
         }
 
         public List<Serie> Lista()
