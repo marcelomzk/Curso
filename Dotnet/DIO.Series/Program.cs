@@ -47,6 +47,13 @@ namespace DIO.Series
 
         }
 
+        private static void ExcluirSerie()
+        {
+            Console.write("Digite o Id da série: ");
+            int indiceSerie = int.Parse(Console.ReadLine());
+
+            repositorio.Exclui(indiceSerie);
+        }
         private static void AtualizarSerie()
         {
             Console.WriteLine("Digite o ID da série: ");
