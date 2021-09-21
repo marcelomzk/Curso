@@ -54,6 +54,16 @@ namespace DIO.Series
 
             repositorio.Exclui(indiceSerie);
         }
+
+        private static void VisualisarSerie()
+        {
+            Console.Write("Digite o Id da Série: ");
+            int indiceSerie = int.Parse(Console.ReadLine());
+
+            var serie = repositorio.RetornaPorId(indiceSerie);
+
+            Console.WriteLine(serie);
+        }
         private static void AtualizarSerie()
         {
             Console.WriteLine("Digite o ID da série: ");
@@ -100,7 +110,9 @@ namespace DIO.Series
 
             foreach (var serie in lista)
             {
-                Console.WriteLine("#ID {0} - {1}", serie.retornaId(), serie.retornaTitulo());
+                var excluido = serie.retornaExcluido();
+                Console.WriteLine("#ID {0} - {1} - {2}", serie.retornaId(), serie.retornaTitulo(), (excluido ? "Excluido": ""));       
+                
             }
         }
 
